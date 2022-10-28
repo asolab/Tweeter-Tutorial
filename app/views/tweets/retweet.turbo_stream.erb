@@ -1,0 +1,5 @@
+<%# app/views/tweets/retweet.turbo_stream.erb  %>
+
+<%= turbo_stream.prepend "tweets" do %>
+  <%= render "tweets/retweet", tweet: @retweet %>
+<% end %>
