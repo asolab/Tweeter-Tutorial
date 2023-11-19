@@ -1,18 +1,19 @@
   <!DOCTYPE html>
 <html class="h-full antialiased">
+
   <%= render "shared/head" %>
 
-  <body class="font-sans font-normal leading-normal text-gray-800 bg-white flex flex-col min-h-screen ">
+  <body class="font-sans font-normal leading-normal text-gray-800 flex flex-col min-h-screen bg-green-500 ">
 
     <header>
       <%= render "shared/flash_notice" %>
     </header>
 
-    <main class="flex-grow container mx-auto px-4">
+    <main class="flex-grow container mx-auto px-4 ">
       <div class="grid lg:grid-cols-12 grid-cols-1 h-screen pr-6">
         <div class="lg:col-span-2 pt-6 pr-6">
           <%= link_to root_path, class:"link text-xl tracking-tight font-black" do %>
-            <span class="text-sky-500">Tweeter</span>
+            <span class="text-black-10000">X</span>
           <% end %>
           <ul class="mt-6">
             <li>

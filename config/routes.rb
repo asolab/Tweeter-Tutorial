@@ -24,5 +24,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  post 'toggle_dark_mode', to: 'application#toggle_dark_mode'
 end
   

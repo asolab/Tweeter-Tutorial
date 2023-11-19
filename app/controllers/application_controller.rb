@@ -6,6 +6,11 @@ class ApplicationController < ActionController::Base
 
   before_action :configure_permitted_parameters, if: :devise_controller?
 
+ def toggle_dark_mode
+    session[:dark_mode] = !session[:dark_mode]
+    redirect_back(fallback_location: root_path)
+  end
+
   private
 
   def layout_by_resource
@@ -16,10 +21,13 @@ class ApplicationController < ActionController::Base
     end
   end
 
+
+
   protected
 
     def configure_permitted_parameters
       devise_parameter_sanitizer.permit(:sign_up, keys: [:name, :username])
       devise_parameter_sanitizer.permit(:account_update, keys: [:name, :username, :profile_image])
     end
+   
 end
